@@ -12,6 +12,7 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var taskEntry: NSTextField!
     @IBOutlet weak var dateOfTaskEntry: NSDatePicker!
+   
     
     @IBAction func dateOfTaskEntry(sender: NSDatePicker) {
         let formatter = DateFormatter()
@@ -24,14 +25,13 @@ class ViewController: NSViewController {
     
     @IBAction func saveTaskButtonClicked(_ sender: NSButton) {
         //save task function
-        taskEntry.stringValue = sender.stringValue;
         do {
             // get the documents folder url
             if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                 // create the destination url for the text file to be saved
-                let fileURL = documentDirectory.appendingPathComponent("msrTasks.txt")
+                let fileURL = documentDirectory.appendingPathComponent("msrfile.txt")
                 // define the string/text to be saved
-                let text = taskEntry.stringValue;
+                let text = taskEntry.stringValue
                 // writing to disk
                 // Note: if you set atomically to true it will overwrite the file if it exists without a warning
                 try text.write(to: fileURL, atomically: false, encoding: .utf8)
