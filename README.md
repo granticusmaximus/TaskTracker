@@ -5,3 +5,8 @@
 * Saves to a text file specific to current month that can be later emailed to a manager for monthly status reports
 * Title of text file will be based off current month in the format of "YYYY-MMmsrfile.txt"
 * Ability to clear textbox and resets date picker to current date
+
+### Future Addons:
+* Timer app to document total billable hours to each task
+* View tasks for historical purposes
+* Email text file from app
