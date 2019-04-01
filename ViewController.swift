@@ -8,6 +8,11 @@
 
 import Cocoa
 
+enum FileWriteError: Error {
+    case directoryDoesntExist
+    case convertToDataIssue
+}
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var taskEntry: NSTextField!
@@ -17,7 +22,7 @@ class ViewController: NSViewController {
     @IBAction func dateOfTaskEntry(sender: NSDatePicker) {
         let formatter = DateFormatter()
         let myString = (String(describing: Date.self))
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "dd-MMM-yyyy"
         let yourDate: Date? = formatter.date(from: myString)
         formatter.dateFormat = "dd-MMM-yyyy"
         print(yourDate as Any)
@@ -27,14 +32,22 @@ class ViewController: NSViewController {
         //save task function
         do {
             // get the documents folder url
-            if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            if let documentDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first {
                 // create the destination url for the text file to be saved
                 let fileURL = documentDirectory.appendingPathComponent("msrfile.txt")
                 // define the string/text to be saved
-                let text = taskEntry.stringValue
-                // writing to disk
-                // Note: if you set atomically to true it will overwrite the file if it exists without a warning
-                try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                let text = taskEntry.stringValue + " " + dateOfTaskEntry.stringValue + "\n"
+                let encoding = String.Encoding.utf8
+                
+                guard let data = text.data(using: encoding) else {
+                    throw FileWriteError.convertToDataIssue
+                }
+                if let fileHandle = FileHandle(forWritingAtPath: fileURL.path) {
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.write(data)
+                } else {
+                    try text.write(to: fileURL, atomically: false, encoding: encoding)
+                }
                 print("saving was successful")
                 // any posterior code goes here
                 // reading from disk
