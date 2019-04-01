@@ -32,11 +32,11 @@ class ViewController: NSViewController {
         //save task function
         do {
             // get the documents folder url
-            if let documentDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first {
+            if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                 // create the destination url for the text file to be saved
                 let fileURL = documentDirectory.appendingPathComponent("msrfile.txt")
                 // define the string/text to be saved
-                let text = taskEntry.stringValue + " " + dateOfTaskEntry.stringValue + "\n"
+                let text = dateOfTaskEntry.stringValue + "\n" + taskEntry.stringValue + "\n" + "\n"
                 let encoding = String.Encoding.utf8
                 
                 guard let data = text.data(using: encoding) else {
