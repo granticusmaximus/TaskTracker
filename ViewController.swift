@@ -28,7 +28,10 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var taskEntry: NSTextField!
     @IBOutlet weak var dateOfTaskEntry: NSDatePicker!
-   
+    @IBAction func viewMsrButton(_ sender: Any) {
+        
+    }
+    
     
     @IBAction func dateOfTaskEntry(sender: NSDatePicker) {
         let formatter = DateFormatter()
@@ -39,6 +42,9 @@ class ViewController: NSViewController {
         print(yourDate as Any)
     }
     
+    @IBAction func MSRViewBrowser(_ sender: NSBrowser) {
+        
+    }
     @IBAction func saveTaskButtonClicked(_ sender: NSButton) {
         //save task function
         do {
