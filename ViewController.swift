@@ -28,6 +28,10 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var taskEntry: NSTextField!
     @IBOutlet weak var dateOfTaskEntry: NSDatePicker!
+    @IBOutlet weak var viewTaskbutton: NSButton!
+    @IBOutlet weak var currentTaskView: NSBox!
+    @IBOutlet weak var openToDoTrackerButton: NSButton!
+    @IBOutlet weak var taskTrackerView: NSView!
     @IBAction func viewMsrButton(_ sender: Any) {
         
     }

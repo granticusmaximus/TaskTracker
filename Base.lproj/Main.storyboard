@@ -687,7 +687,7 @@
                     <window key="window" title="Task Tracker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="578" height="627"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
@@ -699,18 +699,18 @@
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="124" y="428.5"/>
         </scene>
         <!--Task Tracker-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="Task Tracker" id="5gI-5U-AMq" customClass="ViewController" customModule="TaskTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
+                    <view key="view" wantsLayer="YES" misplaced="YES" id="ERx-hH-rdd">
+                        <rect key="frame" x="0.0" y="0.0" width="493" height="650"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="32" y="229" width="50" height="22"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
+                                <rect key="frame" x="32" y="607" width="50" height="22"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Task:" id="Cc7-nU-5Mv">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -718,7 +718,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="3uq-og-vyK">
-                                <rect key="frame" x="225" y="228" width="126" height="23"/>
+                                <rect key="frame" x="225" y="607" width="126" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="8lC-PL-Hb0"/>
                                 </constraints>
@@ -729,7 +729,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-DG-zd4">
-                                <rect key="frame" x="34" y="50" width="413" height="171"/>
+                                <rect key="frame" x="34" y="429" width="413" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="dzQ-sX-4GB"/>
                                 </constraints>
@@ -740,7 +740,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-uG-yt2">
-                                <rect key="frame" x="350" y="229" width="100" height="27"/>
+                                <rect key="frame" x="350" y="608" width="100" height="27"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="dLf-2W-7LK">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="568051200">
@@ -754,7 +754,7 @@
                                 </datePickerCell>
                             </datePicker>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-dP-8XV">
-                                <rect key="frame" x="14" y="11" width="101" height="33"/>
+                                <rect key="frame" x="28" y="384" width="101" height="33"/>
                                 <buttonCell key="cell" type="push" title="Save Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9n0-1b-xfK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -763,8 +763,19 @@
                                     <action selector="saveTaskButtonClicked:" target="5gI-5U-AMq" id="XBo-hd-Jj0"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-ei-1Mw">
+                                <rect key="frame" x="352" y="342" width="101" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="View Tasks" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NMl-IP-68k">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveTaskButtonClicked:" target="5gI-5U-AMq" id="oBd-GC-2ud"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-Nz-dkW">
-                                <rect key="frame" x="363" y="14" width="103" height="33"/>
+                                <rect key="frame" x="129" y="385" width="101" height="33"/>
                                 <buttonCell key="cell" type="push" title="Clear Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2b7-cR-KkT">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -773,15 +784,27 @@
                                     <action selector="clearTaskButtonClicked:" target="5gI-5U-AMq" id="3ng-Qe-9Rs"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-g3-LE6">
-                                <rect key="frame" x="190" y="14" width="100" height="33"/>
-                                <buttonCell key="cell" type="push" title="View MSRs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7KL-GY-I5s">
+                            <box fixedFrame="YES" title="Current Month Tasks" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-40-3rX">
+                                <rect key="frame" x="31" y="137" width="419" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="8KF-xB-ZjR">
+                                    <rect key="frame" x="3" y="3" width="413" height="201"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-W4-mOh">
+                                <rect key="frame" x="34" y="377" width="413" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-S6-voM">
+                                <rect key="frame" x="25" y="107" width="157" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Open ToDo Tracker" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KPq-Dt-TNy">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="viewMsrButton:" target="5gI-5U-AMq" id="s8q-i1-klC"/>
-                                    <segue destination="8hu-Vz-vGm" kind="show" id="dzB-mF-2Xe"/>
+                                    <action selector="saveTaskButtonClicked:" target="5gI-5U-AMq" id="RcE-YR-2aQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -793,79 +816,30 @@
                             <constraint firstItem="xFP-uG-yt2" firstAttribute="leading" secondItem="3uq-og-vyK" secondAttribute="trailing" constant="1" id="DLq-5R-bVY"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="centerY" secondItem="ERx-hH-rdd" secondAttribute="centerY" id="FpR-fB-BbM"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="trailing" secondItem="xFP-uG-yt2" secondAttribute="trailing" id="GcO-BF-2TH"/>
-                            <constraint firstItem="Tab-g3-LE6" firstAttribute="top" secondItem="BJv-DG-zd4" secondAttribute="bottom" constant="8" symbolic="YES" id="Rk7-Y1-Zgv"/>
                             <constraint firstAttribute="bottom" secondItem="cVb-dP-8XV" secondAttribute="bottom" constant="20" symbolic="YES" id="bHY-po-Tsf"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="top" secondItem="xFP-uG-yt2" secondAttribute="bottom" constant="8" symbolic="YES" id="efU-ga-iDr"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="top" secondItem="TyV-c9-G0C" secondAttribute="bottom" constant="8" symbolic="YES" id="gZH-6l-WNb"/>
                             <constraint firstItem="cVb-dP-8XV" firstAttribute="baseline" secondItem="uzg-Nz-dkW" secondAttribute="baseline" id="iQG-SQ-cnC"/>
-                            <constraint firstItem="cVb-dP-8XV" firstAttribute="baseline" secondItem="Tab-g3-LE6" secondAttribute="baseline" id="isn-Vt-kCg"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="34" id="k1P-6B-xMv"/>
                             <constraint firstItem="cVb-dP-8XV" firstAttribute="top" secondItem="BJv-DG-zd4" secondAttribute="bottom" constant="8" symbolic="YES" id="lLJ-4p-ZI5"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="mxn-2Z-e6l"/>
                             <constraint firstItem="cVb-dP-8XV" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" symbolic="YES" id="qpn-G8-hSB"/>
                             <constraint firstItem="3uq-og-vyK" firstAttribute="firstBaseline" secondItem="TyV-c9-G0C" secondAttribute="baseline" id="vBS-FW-CZN"/>
                             <constraint firstItem="BJv-DG-zd4" firstAttribute="top" secondItem="3uq-og-vyK" secondAttribute="bottom" constant="7" id="vOM-os-uuN"/>
-                            <constraint firstItem="BJv-DG-zd4" firstAttribute="centerX" secondItem="Tab-g3-LE6" secondAttribute="centerX" id="yiU-Ls-GN6"/>
-                            <constraint firstItem="Tab-g3-LE6" firstAttribute="leading" secondItem="cVb-dP-8XV" secondAttribute="trailing" constant="83" id="zFe-td-kuq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentTaskView" destination="yvb-40-3rX" id="kKe-9D-Xwp"/>
                         <outlet property="dateOfTaskEntry" destination="xFP-uG-yt2" id="X3k-DI-Vo9"/>
+                        <outlet property="openToDoTrackerButton" destination="yUv-S6-voM" id="Ay4-CP-AIt"/>
                         <outlet property="taskEntry" destination="BJv-DG-zd4" id="zeZ-Kg-Eh8"/>
+                        <outlet property="taskTrackerView" destination="ERx-hH-rdd" id="YXI-wW-cge"/>
+                        <outlet property="viewTaskbutton" destination="uuY-ei-1Mw" id="Zls-lU-MOr"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="654.5"/>
-        </scene>
-        <!--Window Controller-->
-        <scene sceneID="u73-Y6-ji1">
-            <objects>
-                <windowController id="8hu-Vz-vGm" sceneMemberID="viewController">
-                    <window key="window" title="View MSRs" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="FP7-QR-TNm">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-                        <connections>
-                            <outlet property="delegate" destination="8hu-Vz-vGm" id="fjt-ly-mad"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="SqM-Em-ZNW" kind="relationship" relationship="window.shadowedContentViewController" id="RSS-Oq-agH"/>
-                    </connections>
-                </windowController>
-                <customObject id="YNg-y5-wkv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="662" y="402"/>
-        </scene>
-        <!--View MSRs-->
-        <scene sceneID="pMg-4s-nzN">
-            <objects>
-                <viewController title="View MSRs" storyboardIdentifier="MSRView" id="SqM-Em-ZNW" customClass="ViewController" customModule="TaskTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="cbS-gp-qxb">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <browser verticalHuggingPriority="750" allowsExpansionToolTips="YES" enabled="YES" hasHorizontalScroller="YES" allowsEmptySelection="YES" defaultColumnWidth="100" minColumnWidth="100" titled="YES" separatesColumns="YES" allowsTypeSelect="YES" columnResizingType="auto" translatesAutoresizingMaskIntoConstraints="NO" id="ysZ-vU-vin">
-                                <rect key="frame" x="20" y="22" width="440" height="250"/>
-                                <connections>
-                                    <action selector="MSRViewBrowser:" target="SqM-Em-ZNW" id="Jw4-Pu-E5X"/>
-                                </connections>
-                            </browser>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="ysZ-vU-vin" firstAttribute="top" secondItem="cbS-gp-qxb" secondAttribute="top" constant="20" id="6z1-uV-6Q2"/>
-                            <constraint firstAttribute="bottom" secondItem="ysZ-vU-vin" secondAttribute="bottom" constant="22" id="Mv2-DF-TgS"/>
-                            <constraint firstAttribute="trailing" secondItem="ysZ-vU-vin" secondAttribute="trailing" constant="20" symbolic="YES" id="XY3-Og-QGD"/>
-                            <constraint firstAttribute="width" secondItem="ysZ-vU-vin" secondAttribute="height" multiplier="40:19" id="ufy-9V-UOf"/>
-                            <constraint firstItem="ysZ-vU-vin" firstAttribute="leading" secondItem="cbS-gp-qxb" secondAttribute="leading" constant="20" symbolic="YES" id="xCW-DP-UMD"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="v1W-o6-GOB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="662" y="783"/>
+            <point key="canvasLocation" x="935" y="305"/>
         </scene>
     </scenes>
 </document>
