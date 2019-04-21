@@ -7,6 +7,5 @@
 * Ability to clear textbox and resets date picker to current date
 
 ### Future Addons:
-* Timer app to document total billable hours to each task
 * View tasks for historical purposes
 * Email text file from app
