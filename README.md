@@ -9,3 +9,6 @@
 ### Future Addons:
 * View tasks for historical purposes
 * Email text file from app
+
+To download an running version of the app:
+https://drive.google.com/open?id=1NabIp2DgnBEljERHt-B7lPjLEkd-FcQO
